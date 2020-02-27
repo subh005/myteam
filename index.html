@@ -1,0 +1,44 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>Find Your Team</title>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Vollkorn+SC&display=swap" rel="stylesheet">
+<style type="text/css">
+body{  font-family: 'Pacifico', cursive; font-family: 'Vollkorn SC', serif; }
+.container{width:350px; margin: auto;}
+.header{ padding:20px 0px;  font-size: 34px; text-align:center; color:#fff; font-weight:bold; border-bottom:1px solid #eee; box-shadow: 1px 1px 1px #eee; background-color: #2874f0; margin-bottom: 20px;}
+.category-body{width:100%; margin:auto; }
+.category-text{text-align:center; font-size: 24px; line-height:34px; padding-bottom: 20px; display:none;}
+.category-team{font-size: 10em; text-align:center;}
+.category-button{width:100%; padding: 20px 0px; font-size: 24px;  margin-top:5%; text-align:center; background-color:#ff5252; border-radius:6px; box-shadow: 1px 1px 2px #ff5252; color:#fff; cursor: pointer;}
+@media only screen and (max-width: 600px) {
+	.container{width:100%; margin: 0;}
+}
+	
+</style>
+</head>
+<body>
+	<div class="container">
+<div class="header">FUN FRIDAY</div>
+<div class="category-body">
+	<div class="category-text" id="category-text">Your Team Is</div>
+	<div id="showTeam" class="category-team"></div>
+	<div class="category-button" id="category-button" onclick="showRandom()">Show My Team</div>
+	
+</div>
+</div>
+<script type="text/javascript">
+	function showRandom(){
+		var myTeam = new Array("1","2","3","4");
+var randomNum = Math.floor(Math.random() * myTeam.length);
+document.getElementById("showTeam").innerHTML = myTeam[randomNum];
+document.getElementById("category-text").style.display = "block";
+document.getElementById("category-button").style.display = "none";
+
+	}
+	
+
+	</script>
+</body>
+</html>
